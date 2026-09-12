@@ -1,8 +1,8 @@
 {
-  "name": "su-sws/vpsa_ose_subtheme",
-  "description": "VPSA OSE Sub Theme.",
+  "name": "su-sws/ehs_subtheme",
+  "description": "Environmental Health & Safety (EHS) Sub Theme.",
   "type": "drupal-custom-theme",
-  "homepage": "https://github.com/SU-SWS/vpsa_ose_subtheme",
+  "homepage": "https://github.com/SU-SWS/ehs_subtheme",
   "authors": [],
   "license": "GPL-2.0-or-later",
   "minimum-stability": "dev"

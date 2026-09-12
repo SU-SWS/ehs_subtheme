@@ -1,16 +1,31 @@
-# [VPSA OSE](https://github.com/SU-SWS/vpsa_ose_subtheme)
+# [EHS Subtheme](https://github.com/SU-SWS/ehs_subtheme)
 ##### Version: 1.x-dev
 
-Changelog: [Changelog.txt](CHANGELOG.txt)
+Changelog: [CHANGELOG.md](CHANGELOG.md)
 
 Description
 ---
 
-VPSA OSE is a Stanford sub-theme that works with the Stanford Basic theme.
+`ehs_subtheme` is the Stanford sub-theme for **Environmental Health & Safety
+(EHS)**. It works with the Stanford Basic base theme on Stanford Sites
+(Drupal 10).
+
+Machine name: `ehs_subtheme` · CSS class prefix: `ehs-`
 
 Summary of customizations:
-1. Homepage search bar (developed by RH, designed by JT in 2025)
-2. 
+1. Homepage search bar on the front page (`templates/form--search.html.twig`,
+   included from `templates/page--front.html.twig`; styles in
+   `src/scss/components/search/_search.scss`). Originally developed by RH and
+   designed by JT in 2025 for VPSA OSE, from which this theme was forked.
+
+History / provenance:
+This repository was forked from
+[`vpsa_ose_subtheme`](https://github.com/SU-SWS/vpsa_ose_subtheme) and
+rebranded for EHS. The OSE-specific related-resource links (CardinalEngage,
+student-org work orders, VSO re-registration) and the contact-us block were
+removed from the search bar — only the search field remains. The SCSS for that
+link list is kept in place under `ehs-` prefixed classes so an EHS link list can
+be added back without restyling.
 
 Documentation
 ---
@@ -20,16 +35,14 @@ https://devguide.sites.stanford.edu/front-end/drupal/sub-themes
 Installation
 ---
 1. Review the documentation link above for best practices, particularly the Do's and Don't's sections.
-2. Fork or download this theme repository. 
-3. Change all theme file names from including "vpsa_ose_subtheme" to including the machine name of your theme.
-4. Run a search and replace throughout the theme files to replace "vpsa_ose_subtheme" with the machine name of your theme.
-5. Add any specific brand colors you need (in addition to the decanter colors that are already available) to src/scss/utilities/variables/_colors.scss. 
+2. Place this repository in the site's themes directory, then enable it and set it as the default active theme.
+3. Add any EHS brand colors you need (in addition to the decanter colors that are already available) to src/scss/utilities/variables/_colors.scss. 
 See all the colors already available through decanter: https://decanter.stanford.edu/page/brand-design-elements-color/ 
-6. If desired, add font settings if you need to override and use fonts other than decanter fonts ( https://decanter.stanford.edu/page/brand-design-elements-typography/ ) [link],
-by defining a font library in the themename.libraries.yml file.
-7. If desired, add button mixins in src/scss/utilities/mixins/_buttons.scss with your button styles and then reference them and use them in src/scss/theme/_button.scss.
-8. If desired, add cta and link mixins in src/scss/utilities/mixins/_cta.scss with your button styles and then reference them and use them in src/scss/theme/_cta.scss.
-9. If you want to skin or theme a component, like a paragraph, create a _mycomponent.scss file in src/scss/components folder. Consider using a subfolder like 'cards' or 'banners' if applicable.
+4. If desired, add font settings if you need to override and use fonts other than decanter fonts ( https://decanter.stanford.edu/page/brand-design-elements-typography/ ),
+by defining a font library in the ehs_subtheme.libraries.yml file.
+5. If desired, add button mixins in src/scss/utilities/mixins/_buttons.scss with your button styles and then reference them and use them in src/scss/theme/_button.scss.
+6. If desired, add cta and link mixins in src/scss/utilities/mixins/_cta.scss with your button styles and then reference them and use them in src/scss/theme/_cta.scss.
+7. If you want to skin or theme a component, like a paragraph, create a _mycomponent.scss file in src/scss/components folder. Consider using a subfolder like 'cards' or 'banners' if applicable. Prefix any new classes with `ehs-`.
 
 Configuration
 ---

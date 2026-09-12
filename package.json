@@ -1,5 +1,5 @@
 {
-  "name": "vpsa_ose_subtheme",
+  "name": "ehs_subtheme",
   "version": "1.0.0",
   "description": "Changelog: [CHANGELOG.md](CHANGELOG.md)",
   "main": "webpack.config.js",

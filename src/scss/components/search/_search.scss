@@ -106,7 +106,13 @@
     }
   }
 
-  .ose-contact-us,
+  // Related-resource link list and contact-us block.
+  //
+  // The OSE link markup these styles were written for was removed when this
+  // theme was rebranded for EHS — form--search.html.twig now outputs the search
+  // bar only. The rules are retained so an EHS link list can be dropped back
+  // into the template without restyling; use the `ehs-` prefixed classes below.
+  .ehs-contact-us,
   .su-homepage-search__resources {
     display: block;
   }
@@ -137,7 +143,7 @@
     margin: 0;
   }
 
-  a.ose-button {
+  a.ehs-button {
     display: block;
     color: $su-color-white;
     background: $su-color-lagunita;
@@ -164,7 +170,7 @@
     }
   }
 
-  .ose-contact-us {
+  .ehs-contact-us {
     color: $su-color-white;
     text-align: center;
     margin-top: 6.5rem;

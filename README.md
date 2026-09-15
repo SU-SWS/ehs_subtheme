@@ -17,15 +17,18 @@ Summary of customizations:
    included from `templates/page--front.html.twig`; styles in
    `src/scss/components/search/_search.scss`). Originally developed by RH and
    designed by JT in 2025 for VPSA OSE, from which this theme was forked.
+   Restyled for EHS in the Stanford brand near-black (`$su-color-black`,
+   `#2e2d29`) with a digital red (`$su-color-digital-red`) submit hover.
 
 History / provenance:
 This repository was forked from
 [`vpsa_ose_subtheme`](https://github.com/SU-SWS/vpsa_ose_subtheme) and
-rebranded for EHS. The OSE-specific related-resource links (CardinalEngage,
-student-org work orders, VSO re-registration) and the contact-us block were
-removed from the search bar — only the search field remains. The SCSS for that
-link list is kept in place under `ehs-` prefixed classes so an EHS link list can
-be added back without restyling.
+rebranded for EHS. The search bar was reduced to the search field alone: the
+OSE-specific related-resource links (CardinalEngage, student-org work orders,
+VSO re-registration), the contact-us block, the decorative background image,
+and the lagunita teal palette that went with them were all removed. If EHS
+wants a related-links row under the search field later, the markup and styles
+need to be written fresh — see commit history for the OSE originals.
 
 Documentation
 ---
@@ -67,24 +70,6 @@ This will process scss, js, and asset files, preparing them from the src directo
 yarn watch
 ```
 This will watch the scss files and compile them upon saving.
-
-GitPod
----
-1. Add your ssh key to [GitPod](https://gitpod.io/variables)
-   1. It is recommended to have a password-less ssh key for simplicity.
-      1. `ssh-keygen -b 4096`, press enter when asked for the password
-      2. Add this ssh public key to the necessary services: Acquia, Github, etc.
-   2. Get the base64 string of your ssh key files
-      1. `cat id_rsa | base64` for the private key
-      2. `cat id_rsa.pub | base64` for the public key.
-   3. In GitPod, add the variable named `SSH_PRIVATE_KEY` with the private key
-   4. In GitPod, add the variable named `SSH_PUBLIC_KEY` with the public key
-   5. In Gitpod, add the variable named `GITCONFIG` with the base64 of your git config: `cat ~/.gitconfig | base64`
-2. Recommended, but not required:
-   1. install the GitPod browser plugin
-   2. Configure your browser settings for an easier experience: https://www.gitpod.io/docs/configure/browser-settings
-3. Open a gitpod workspace with [these instructions](https://www.gitpod.io/docs/getting-started#start-your-first-workspace)
-
 
 Contribution / Collaboration
 ---

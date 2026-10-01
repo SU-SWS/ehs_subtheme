@@ -54,10 +54,6 @@
     justify-content: flex-end;
     margin: 3.5rem 0;
 
-    @include grid-media-between('xs', 'sm') {
-      margin: 0;
-    }
-
     .su-homepage-search__input {
       @include modular-typography(2);
 
@@ -103,8 +99,8 @@
   .su-homepage-search__actions {
     position: relative;
     z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
     margin: 0 auto 2rem;
     max-width: 100rem;
@@ -131,7 +127,7 @@
     background-color: transparent;
     color: $su-color-white;
     font-weight: $su-font-regular;
-    font-size: 1rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;

@@ -1,12 +1,27 @@
 .su-homepage-search {
   @include responsive-spacing('padding', null null 1 null);
 
+  position: relative;
   padding-top: 2.7rem;
   background: $ehs-bg-search;
   background-size: cover;
   background-position: center;
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+  }
+
   .su-homepage-search__form {
+    position: relative;
+    z-index: 1;
     margin: 0 auto 3.5rem;
     max-width: 100rem;
 
@@ -16,6 +31,8 @@
   }
 
   .su-homepage-search__label {
+    position: relative;
+    z-index: 1;
     @include modular-typography(3);
 
     font-weight: $su-font-regular;
@@ -80,6 +97,49 @@
         border-color: $su-color-digital-red;
         box-shadow: 0 4px 4px 0 #00000040;
       }
+    }
+  }
+
+  .su-homepage-search__actions {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 0 auto 2rem;
+    max-width: 100rem;
+    list-style: none;
+    padding: 0;
+
+    @include grid-media-between('xs', 'lg') {
+      @include centered-column;
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      margin: 0;
+    }
+  }
+
+  .su-homepage-search__action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid $su-color-white;
+    border-radius: 5rem;
+    background-color: transparent;
+    color: $su-color-white;
+    font-weight: $su-font-regular;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 4px 0 #00000040;
     }
   }
 }
